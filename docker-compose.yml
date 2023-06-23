@@ -3,7 +3,7 @@ services:
   vprodb:
     build:
       context: ./Docker-files/db
-    image: docker push 5hivani/vprofile-db
+    image: 5hivani/vprofile-db
     container_name: vprodb
     ports:
       - "3306:3306"
@@ -27,7 +27,7 @@ services:
   vproapp:
     build:
       context: ./Docker-files/app
-    image: docker push 5hivani/vprofile-app
+    image: 5hivani/vprofile-app
     container_name: vproapp
     ports:
       - "8080:8080"
@@ -37,7 +37,7 @@ services:
   vproweb:
     build:
       context: ./Docker-files/web
-    image: docker push 5hivani/vprofile-web
+    image: 5hivani/vprofile-web
     container_name: vproweb
     ports:
       - "80:80"
