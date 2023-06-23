@@ -3,7 +3,7 @@ LABEL "Project" = "Vprofile"
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/5hivani99/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
-FROM tomacat:9-jre11 
+FROM tomcat:9-jre11 
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY --from=BUILD_IMAGE vprofile-project/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
